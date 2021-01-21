@@ -14,7 +14,7 @@ export class NakoIngestApi {
     const response = await fetch('https://api.nako.co/v1/activities', {
       method: 'post',
       body: JSON.stringify({
-        happened_at: activity.happenedAt ? activity.happenedAt.toISOString() : null,
+        happened_at: activity.happenedAt,
         operation: activity.operation.toUpperCase(),
         resource: activity.resource,
         actor: {
