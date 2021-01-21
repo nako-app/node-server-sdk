@@ -27,4 +27,4 @@ jobs:
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_USERNAME: 'node-server-sdk'
-          SLACK_ICON_EMOJI: ':wrench:'
+          SLACK_ICON_EMOJI: ':nodejs:'
