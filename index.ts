@@ -1,3 +1,4 @@
+import fetch from 'node-fetch'
 import { Activity } from './types'
 
 export class NakoIngestApi {
@@ -14,7 +15,7 @@ export class NakoIngestApi {
       method: 'post',
       body: JSON.stringify({
         happened_at: activity.happenedAt,
-        operation: activity.operation,
+        operation: activity.operation.toUpperCase(),
         resource: activity.resource,
         actor: {
           id: activity.actor.id,

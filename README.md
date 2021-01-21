@@ -1,3 +1,3 @@
-# node-server-sdk
+# nako-server-sdk
 
 Coming soon!

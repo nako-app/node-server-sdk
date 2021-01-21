@@ -1,5 +1,5 @@
 {
-  "name": "server-sdk",
+  "name": "nako-server-sdk",
   "version": "0.0.1",
   "description": "Nako's Node server SDK",
   "main": "dist/index.js",
