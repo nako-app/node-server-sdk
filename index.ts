@@ -23,7 +23,7 @@ export class NakoIngestApi {
           first_name: activity.actor.firstName,
           last_name: activity.actor.lastName
         },
-        result: activity.result || null
+        result: activity.result
       }),
       headers: {
         'x-api-key': NakoIngestApi.apiKey
