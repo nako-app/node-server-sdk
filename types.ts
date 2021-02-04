@@ -25,4 +25,5 @@ export interface Activity {
   resource: ActivityResource
   actor: ActivityActor
   result?: ActivityResult
+  metadata?: Map<String, Object>
 }

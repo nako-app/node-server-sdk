@@ -15,6 +15,7 @@ export class NakoIngestApi {
       method: 'post',
       body: JSON.stringify({
         happened_at: activity.happenedAt,
+        metadata: activity.metadata,
         operation: activity.operation,
         resource: activity.resource,
         actor: {
