@@ -7,6 +7,7 @@ export interface ActivityActor {
   id: String
   firstName: String
   lastName: String
+  isPrimary?: boolean
 }
 
 export interface ActivityResource {
@@ -22,8 +23,8 @@ export interface ActivityResult {
 export interface Activity {
   happenedAt: Date
   operation: String
-  resource: ActivityResource
-  actor: ActivityActor
+  resources: ActivityResource[]
+  actors: ActivityActor[]
   result?: ActivityResult
   metadata?: Map<String, Object>
 }

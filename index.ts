@@ -17,13 +17,14 @@ export class NakoIngestApi {
         happened_at: activity.happenedAt,
         metadata: activity.metadata,
         operation: activity.operation,
-        resource: activity.resource,
-        actor: {
-          id: activity.actor.id,
-          type: activity.actor.type,
-          first_name: activity.actor.firstName,
-          last_name: activity.actor.lastName
-        },
+        resources: activity.resources,
+        actor: activity.actors.map(a => { return {
+          id: a.id,
+          type: a.type,
+          first_name: a.firstName,
+          last_name: a.lastName,
+          is_primary: a.isPrimary
+        }}),
         result: activity.result
       }),
       headers: {
