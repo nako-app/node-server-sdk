@@ -18,7 +18,7 @@ export class NakoIngestApi {
         metadata: activity.metadata,
         operation: activity.operation,
         resources: activity.resources,
-        actor: activity.actors.map(a => { return {
+        actors: activity.actors.map(a => { return {
           id: a.id,
           type: a.type,
           first_name: a.firstName,
