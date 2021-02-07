@@ -25,7 +25,8 @@ export class NakoIngestApi {
           last_name: a.lastName,
           is_primary: a.isPrimary
         }}),
-        result: activity.result
+        result: activity.result,
+        state: activity.state
       }),
       headers: {
         'x-api-key': NakoIngestApi.apiKey
