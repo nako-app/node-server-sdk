@@ -1,6 +1,6 @@
 {
   "name": "nako-server-sdk",
-  "version": "0.0.15",
+  "version": "0.0.16",
   "description": "Nako's Node server SDK",
   "main": "dist/index.js",
   "husky": {
@@ -37,5 +37,8 @@
     "husky": "^4.3.8",
     "lint-staged": "^10.5.4"
   },
+  "files": [
+    "dist/*"
+  ],
   "types": "dist/index.d.ts"
 }
