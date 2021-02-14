@@ -1,8 +1,9 @@
 {
   "name": "nako-server-sdk",
-  "version": "0.0.16",
+  "version": "0.0.20",
   "description": "Nako's Node server SDK",
   "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
@@ -39,6 +40,5 @@
   },
   "files": [
     "dist/*"
-  ],
-  "types": "dist/index.d.ts"
+  ]
 }
