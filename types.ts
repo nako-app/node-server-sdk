@@ -9,7 +9,7 @@ export enum ActivityResultStatus {
 }
 
 export enum ActivityStateStatus {
-  Schedules = 'scheduled',
+  Scheduled = 'scheduled',
   InProgress = 'in_progress',
   Completed = 'completed'
 }
