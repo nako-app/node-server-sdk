@@ -29,7 +29,7 @@ export class NakoIngestApi {
         state: activity.state
       }),
       headers: {
-        'x-api-key': NakoIngestApi.apiKey
+        'Authorization': NakoIngestApi.apiKey
       }
     })
 
