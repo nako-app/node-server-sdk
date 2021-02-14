@@ -1,5 +1,5 @@
 import fetch from 'node-fetch'
-import { Activity } from './types'
+import { Activity, CreatedActivity,  Token } from './types'
 
 export class NakoIngestApi {
   static apiKey
@@ -10,7 +10,7 @@ export class NakoIngestApi {
   }
 
   // TODO - add validation
-  async createActivity(activity: Activity) {
+  async createActivity(activity: Activity): Promise<CreatedActivity> {
     const response = await fetch('https://api.nako.co/v1/activities', {
       method: 'post',
       body: JSON.stringify({
@@ -37,7 +37,18 @@ export class NakoIngestApi {
 
     // TODO - handle errors
     const json = await response.json()
+    return json
+  }
 
+  async getToken(): Promise<Token> {
+    const response = await fetch('https://api.nako.co/v1/token', {
+      headers: {
+        Authorization: NakoIngestApi.apiKey
+      }
+    })
+
+    // TODO - handle errors
+    const json = await response.json()
     return json
   }
 }

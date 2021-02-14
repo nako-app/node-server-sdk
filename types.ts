@@ -46,3 +46,12 @@ export interface Activity {
   result?: ActivityResult
   state?: ActivityState
 }
+
+export type CreatedActivity = Activity | {
+  createdAt: Date
+  id: String
+}
+
+export interface Token {
+  token: string;
+}
