@@ -29,3 +29,11 @@ The SDK exposes methods to ingest and retrieve activities. Examples are availabl
 ## Contributing
 
 We welcome all contribution! You can always open an issue in this repo and we'll respond as soon as possible. But if you feel like sharing some of your precious time with us, be our guest and open a PR.
+
+### Setup
+
+Run `npm install`
+
+### Build
+
+Run `npm run build`
