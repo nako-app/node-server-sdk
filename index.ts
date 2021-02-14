@@ -18,18 +18,20 @@ export class NakoIngestApi {
         metadata: activity.metadata,
         operation: activity.operation,
         resources: activity.resources,
-        actors: activity.actors.map(a => { return {
-          id: a.id,
-          type: a.type,
-          first_name: a.firstName,
-          last_name: a.lastName,
-          is_primary: a.isPrimary
-        }}),
+        actors: activity.actors.map(a => {
+          return {
+            id: a.id,
+            type: a.type,
+            first_name: a.firstName,
+            last_name: a.lastName,
+            is_primary: a.isPrimary
+          }
+        }),
         result: activity.result,
         state: activity.state
       }),
       headers: {
-        'Authorization': NakoIngestApi.apiKey
+        Authorization: NakoIngestApi.apiKey
       }
     })
 

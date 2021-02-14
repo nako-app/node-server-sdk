@@ -3,9 +3,18 @@
   "version": "0.0.14",
   "description": "Nako's Node server SDK",
   "main": "dist/index.js",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "{src,public}/**/*.*": "prettier --config=.prettierrc --write --ignore-unknown"
+  },
   "scripts": {
     "build": "tsc",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "lint": "prettier --config=.prettierrc \"**/*.(js|ts)\" --write --ignore-unknown"
   },
   "repository": {
     "type": "git",
@@ -23,6 +32,10 @@
   "dependencies": {
     "node-fetch": "^2.6.1",
     "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "husky": "^5.0.9",
+    "lint-staged": "^10.5.4"
   },
   "types": "dist/index.d.ts"
 }
