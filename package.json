@@ -14,7 +14,8 @@
   "scripts": {
     "build": "tsc",
     "prepare": "npm run build",
-    "lint": "prettier --config=.prettierrc \"**/*.(js|ts)\" --write --ignore-unknown"
+    "lint": "prettier --config=.prettierrc \"**/*.(js|ts)\" --write --ignore-unknown",
+    "test": "mocha -r ts-node/register **/*.test.ts"
   },
   "repository": {
     "type": "git",
@@ -34,8 +35,14 @@
     "typescript": "^4.1.3"
   },
   "devDependencies": {
+    "@types/chai": "^4.2.15",
+    "@types/mocha": "^8.2.1",
+    "@types/node": "^14.14.31",
+    "chai": "^4.3.0",
     "husky": "^4.3.8",
-    "lint-staged": "^10.5.4"
+    "lint-staged": "^10.5.4",
+    "mocha": "^8.3.0",
+    "ts-node": "^9.1.1"
   },
   "types": "dist/index.d.ts"
 }
