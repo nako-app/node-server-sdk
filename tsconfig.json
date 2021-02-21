@@ -6,7 +6,10 @@
     "sourceMap": true,
     "esModuleInterop": true,
     "strictNullChecks": true,
-    "declaration": true
+    "declaration": true,
+    "typeRoots": [
+      "./types"
+    ]
   },
   "exclude": ["node_modules", "dist"]
 }

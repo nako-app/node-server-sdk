@@ -1,8 +1,9 @@
 import fetch from 'node-fetch'
-import { Activity, CreatedActivity, Token } from './types'
+import { Activity, ActivityResult, ActivityState, CreatedActivity, Token } from './types'
 
 export class NakoIngestApi {
   static apiKey
+  static nakoApiUrl = 'https://api.nako.co/v1/'
 
   static init(apiKey: String) {
     NakoIngestApi.apiKey = apiKey
@@ -11,7 +12,7 @@ export class NakoIngestApi {
 
   // TODO - add validation
   async createActivity(activity: Activity): Promise<CreatedActivity> {
-    const response = await fetch('https://api.nako.co/v1/activities', {
+    const response = await fetch(NakoIngestApi.nakoApiUrl + 'activities', {
       method: 'post',
       body: JSON.stringify({
         happened_at: activity.happenedAt,
@@ -38,6 +39,25 @@ export class NakoIngestApi {
     // TODO - handle errors
     const json = await response.json()
     return json
+  }
+
+  async updateActivity(
+    id: string,
+    result?: ActivityResult,
+    state?: ActivityState
+  ): Promise<CreatedActivity> {
+    const response = await fetch(NakoIngestApi.nakoApiUrl + 'activities', {
+      method: 'patch',
+      body: JSON.stringify({
+        result: result,
+        state: state
+      }),
+      headers: {
+        Authorization: NakoIngestApi.apiKey
+      }
+    })
+
+    return response
   }
 
   async getToken(): Promise<Token> {
