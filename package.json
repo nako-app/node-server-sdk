@@ -4,11 +4,6 @@
   "description": "Nako's Node server SDK",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
   "lint-staged": {
     "*.ts": "prettier --config=.prettierrc --write --ignore-unknown"
   },
@@ -16,6 +11,10 @@
     "build": "tsc",
     "prepare": "npm run build",
     "lint": "prettier --config=.prettierrc \"**/*.(js|ts)\" --write --ignore-unknown",
+    "postinstall": "husky install",
+    "prepublishOnly": "pinst --disable",
+    "postpublish": "pinst --enable",
+    "pre-commit": "lint-staged",
     "test": "mocha -r ts-node/register **/*.test.ts"
   },
   "repository": {
@@ -40,9 +39,10 @@
     "@types/mocha": "^8.2.1",
     "@types/node": "^14.14.31",
     "chai": "^4.3.0",
-    "husky": "^4.3.8",
+    "husky": "^5.1.1",
     "lint-staged": "^10.5.4",
     "mocha": "^8.3.0",
+    "pinst": "^2.1.6",
     "ts-node": "^9.1.1"
   },
   "files": [
