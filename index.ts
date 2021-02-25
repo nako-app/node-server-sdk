@@ -1,12 +1,5 @@
 import fetch from 'node-fetch'
-import {
-  Activity,
-  ActivityResult,
-  ActivityState,
-  ActivityUpdate,
-  CreatedActivity,
-  Token
-} from './types'
+import { Activity, ActivityUpdate, CreatedActivity, Token } from './types'
 
 export class NakoIngestApi {
   static apiKey

@@ -1,7 +1,7 @@
 import { NakoIngestApi } from '../index'
 import { expect } from 'chai'
 import { describe, it } from 'mocha'
-import { Activity, ActivityActorType, ActivityResultStatus, ActivityStateStatus } from '../types'
+import { Activity, ActivityResultStatus, ActivityStateStatus } from '../types'
 
 const anActivity: Activity = {
   happenedAt: new Date(),
