@@ -40,4 +40,4 @@ Run `npm run build`
 
 ### Tests
 
-Set an API key with `export API_KEY=MY_API_KEY` and then run `npm run test`
+Set an API key with `export NAKO_API_KEY=MY_API_KEY` and then run `npm run test`
