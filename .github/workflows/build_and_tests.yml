@@ -1,6 +1,8 @@
-name: build
+name: build_and_tests
 
-on: [pull_request]
+on:
+  push:
+    branches: [master]
 
 jobs:
   build:
@@ -21,3 +23,9 @@ jobs:
       - run: |
           npm install
           npm run build
+          npm run test
+      - uses: rtCamp/action-slack-notify@master
+        env:
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+          SLACK_USERNAME: 'node-server-sdk'
+          SLACK_ICON_EMOJI: ':nodejs:'

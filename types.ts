@@ -47,12 +47,15 @@ export interface Activity {
   state?: ActivityState
 }
 
-export type CreatedActivity =
-  | Activity
-  | {
-      createdAt: Date
-      id: String
-    }
+export interface ActivityUpdate {
+  result?: ActivityResult
+  state?: ActivityState
+}
+
+export interface CreatedActivity extends Activity {
+  createdAt: Date
+  id: String
+}
 
 export interface Token {
   token: string
