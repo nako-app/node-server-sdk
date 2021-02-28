@@ -39,4 +39,4 @@ jobs:
           SLACK_USERNAME: 'node-server-sdk'
           SLACK_ICON_EMOJI: ':nodejs:'
           SLACK_COLOR: '#ff0000'
-          SLACK_MESSAGE: ':rotating_light: build failure!'
+          SLACK_MESSAGE: ':rotating_light: Build failure!'

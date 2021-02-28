@@ -15,7 +15,7 @@ export class NakoIngestApi {
     const response = await fetch(NakoIngestApi.apiUrl + 'activities', {
       method: 'post',
       body: JSON.stringify({
-        happened_at: activity.happenedA,
+        happened_at: activity.happenedAt,
         metadata: activity.metadata,
         operation: activity.operation,
         resources: activity.resources,
