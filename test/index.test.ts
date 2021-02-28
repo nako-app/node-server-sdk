@@ -37,6 +37,7 @@ describe('SDK functional tests', () => {
 
     expect(response.id).to.be.not.undefined
   })
+
   it('Can update an activity', async () => {
     const sdk = NakoIngestApi.init(process.env['NAKO_API_KEY'] ?? '')
 
