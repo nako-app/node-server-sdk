@@ -38,4 +38,5 @@ jobs:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
           SLACK_USERNAME: 'node-server-sdk'
           SLACK_ICON_EMOJI: ':nodejs:'
-          SLACK_TITLE: ':rotating_light: node-server-sdk build failure'
+          SLACK_COLOR: '#ff0000'
+          SLACK_MESSAGE: ':rotating_light: build failure!'
