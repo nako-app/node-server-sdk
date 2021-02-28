@@ -1,4 +1,4 @@
-name: build
+name: master
 
 on:
   push:
@@ -23,6 +23,7 @@ jobs:
       - run: |
           npm install
           npm run build
+          npm run test
       - uses: rtCamp/action-slack-notify@master
         env:
           SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
